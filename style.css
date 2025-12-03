@@ -1,0 +1,173 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0a0f1f;
+    color: #e8f7ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* THEME TOGGLE */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+.theme-toggle:hover {
+    background: #00eaff;
+    color: #000;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Typewriter Animation */
+.typing {
+    border-right: 2px solid #00eaff;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    to { width: 100%; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.8;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.glow-btn:hover {
+    background: #00eaff;
+    color: #000;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 15%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* PROJECT CARDS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 20px;
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    transition: 0.3s;
+    background: #101a33;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00eaff;
+}
+
+/* POP ANIMATION */
+.pop {
+    animation: popIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: none;
+}
+
+.reveal.active {
+    animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LIGHT MODE */
+.light {
+    background: #f2f7ff;
+    color: #001220;
+}
+
+.light .card {
+    background: #ffffff;
+    border-color: #005eff;
+    box-shadow: 0 0 10px #005eff50;
+}
+
+.light .btn {
+    border-color: #005eff;
+    color: #005eff;
+}
+
+.light .btn:hover {
+    background: #005eff;
+    color: #fff;
+}
